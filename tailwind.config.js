@@ -14,6 +14,14 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'navbarBlack': '#111111',
+                'backgroundGray': '#222222',
+                'tagGreen': '#00ffbb',
+                'liveGreen': '#33ee33', 
+                'supportYellow': '#BB9900',
+                'telexBlue': '#88DDFF',
+            },
         },
     },
 
