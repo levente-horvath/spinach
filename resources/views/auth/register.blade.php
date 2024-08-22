@@ -4,10 +4,25 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="username" :value="__('Name')" />
+            <x-input-label for="username" :value="__('Username')" />
             <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('username')" class="mt-2" />
         </div>
+
+
+        <div>
+            <x-input-label for="first_name" :value="__('First name')" />
+            <x-text-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus autocomplete="first_name" />
+            <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
+        </div>
+
+
+        <div>
+            <x-input-label for="last_name" :value="__('Last name')" />
+            <x-text-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus autocomplete="last_name" />
+            <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
+        </div>
+
 
         <!-- Email Address -->
         <div class="mt-4">
@@ -39,12 +54,14 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="mt-4">
-            <label for="date_of_birth" class="block text-m font-medium leading-9 text-black">Date of Birth</label>
+        <<div class="sm:col-span-3">
+            <label for="dob" class="block text-m font-medium leading-9 text-black">Date of Birth</label>
             <div class="mt-2">
-                <input type="date_of_birth" id="date_of_birth" name="date_of_birth" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <input type="date" id="date_of_birth" name="date_of_birth" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
             </div>
         </div>
+
+
 
 
         <div class="flex items-center justify-end mt-4">
