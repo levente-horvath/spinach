@@ -11,16 +11,43 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
+        'date_of_birth',
+        'first_name',
+        'last_name'
     ];
+
+
+    /**
+     * Explictly state, which attribues are NOT mass asssignable.
+     *
+     * @var array<int, string>
+     */
+    protected $guarded = [
+        'role',
+    ];
+
+
+
+    /**
+     *  Calculates the age from the user's date of birth
+     */
+
+    public function getAgeAttribute()
+    {
+        return \Carbon\Carbon::parse($this->date_of_birth)->age;
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.
